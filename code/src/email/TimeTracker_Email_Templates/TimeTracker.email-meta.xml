@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>When User submit the time sheet, notify to project manager</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Time sheet assignment notification to Manager</name>
+    <style>none</style>
+    <subject>Please Approve Time sheet submitted by {!Project_Timesheet__c.OwnerFullName}</subject>
+    <type>text</type>
+</EmailTemplate>

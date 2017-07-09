@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Project Time Entry</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Project Time Entries</value>
+    </caseValues>
+    <fields>
+        <help><!-- Exit time for this record --></help>
+        <label><!-- Last Timer Stop Date --></label>
+        <name>End_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total amount --></help>
+        <label><!-- Invoice Amount --></label>
+        <name>Invoice_Amount__c</name>
+    </fields>
+    <fields>
+        <help><!-- Note for this entry --></help>
+        <label><!-- Note --></label>
+        <name>Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Id --></label>
+        <name>Project_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Task related to this entry --></help>
+        <label><!-- Project Task --></label>
+        <name>Project_Task__c</name>
+        <relationshipLabel><!-- Project Time Entries --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Related Timesheet --></help>
+        <label><!-- Project Timesheet --></label>
+        <name>Project_Timesheet__c</name>
+        <relationshipLabel><!-- Project Time Entries --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Entry time for this record --></help>
+        <label><!-- Last Timer Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start Time in milliseconds --></help>
+        <label><!-- Last Timer Start Time (milliseconds) --></label>
+        <name>Start_Time_Millis__c</name>
+    </fields>
+    <fields>
+        <help><!-- Status of timer --></help>
+        <label><!-- Timer Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Start</masterLabel>
+            <translation><!-- Start --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stop</masterLabel>
+            <translation><!-- Stop --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Stop Time  in milliseconds --></help>
+        <label><!-- Last Timer Stop Time (milliseconds) --></label>
+        <name>Stop_Time_Millis__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total Time spent  (in hours) --></help>
+        <label><!-- Total Time (in hours) --></label>
+        <name>Total_Time_in_hours__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total time spent on this task in milliseconds --></help>
+        <label><!-- Total time (milliseconds) --></label>
+        <name>Total_time_spent_Millis__c</name>
+    </fields>
+    <layouts>
+        <layout>Time Entry Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Time sheet associated with this entry is already approved. You can not add or update time entry to it. --></errorMessage>
+        <name>TW_ApprovedTimeEntryCannotEdited</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Do not specify End date if timer status is &apos;Start&apos; --></errorMessage>
+        <name>TW_IfTimeStarted_EndDateShouldBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Last Timer Start Date and Last Time Stop should not be blank and Last Timer Start Date should not be greater than Last Timer Stop Date --></errorMessage>
+        <name>TW_TimerStartDateGreaterThanTimeStopDate</name>
+    </validationRules>
+</CustomObjectTranslation>

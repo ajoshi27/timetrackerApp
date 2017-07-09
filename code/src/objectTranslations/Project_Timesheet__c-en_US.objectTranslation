@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Project Timesheet</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Project Timesheets</value>
+    </caseValues>
+    <fields>
+        <help><!-- Time sheet End Date --></help>
+        <label><!-- End Date --></label>
+        <name>End_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total cost incurred this week --></help>
+        <label><!-- Invoice Amount --></label>
+        <name>Invoice_Amount__c</name>
+    </fields>
+    <fields>
+        <help><!-- Whether time sheet is approved or not --></help>
+        <label><!-- IsApproved --></label>
+        <name>IsApproved__c</name>
+    </fields>
+    <fields>
+        <help><!-- Project related to this timesheet --></help>
+        <label><!-- Project --></label>
+        <name>Project__c</name>
+        <relationshipLabel><!-- Project Timesheets --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Time sheet start date --></help>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Manager of this time sheet. It is actually a project manager. --></help>
+        <label><!-- Timesheet Manager --></label>
+        <name>Timesheet_Manager__c</name>
+        <relationshipLabel><!-- Project Timesheets --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Total time spent by people this week on this project. --></help>
+        <label><!-- Total time (Hours) --></label>
+        <name>Total_time__c</name>
+    </fields>
+    <layouts>
+        <layout>Project Timesheet Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You do not have permission to edit the time sheet --></errorMessage>
+        <name>TW_MemberCantEditTimesheetAfterApproval</name>
+    </validationRules>
+</CustomObjectTranslation>

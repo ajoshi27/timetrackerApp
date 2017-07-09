@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>TW_Time</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TW_Time</shortDescription>
+        <value>Time</value>
+    </labels>
+    <labels>
+        <fullName>TW_To</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TW_To</shortDescription>
+        <value>To</value>
+    </labels>
+    <labels>
+        <fullName>TW_WeekFrom</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TW_WeekFrom</shortDescription>
+        <value>Week From</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Project Time Entry History</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Project Time Entry Histories</value>
+    </caseValues>
+    <fields>
+        <help><!-- Date when Timer is stopped --></help>
+        <label><!-- End Date --></label>
+        <name>End_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total amount for a user based on hourly rate. Invoice Amount = hourly rate * total time --></help>
+        <label><!-- Invoice Amount --></label>
+        <name>Invoice_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Manager Id --></label>
+        <name>Project_Manager_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Project Record Id. This will be used while generating the timesheet. it should not display on detail page --></help>
+        <label><!-- Project Record Id --></label>
+        <name>Project_Record_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Related project Time entry --></help>
+        <label><!-- Project Time Entry --></label>
+        <name>Project_Time_Entry__c</name>
+        <relationshipLabel><!-- Project Time Entry Histories --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Date when Timer is started --></help>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Time Spent ( In milliseconds) --></label>
+        <name>Total_Time_Spent__c</name>
+    </fields>
+    <layouts>
+        <layout>Project Time Entry History Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

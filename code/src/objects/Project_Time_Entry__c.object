@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Time entry for a task.It will show the last start time,stop time and total time spent</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <description>Exit time for this record</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Exit time for this record</inlineHelpText>
+        <label>Last Timer Stop Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Invoice_Amount__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <description>Total amount</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total amount</inlineHelpText>
+        <label>Invoice Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Note__c</fullName>
+        <description>Note for this entry</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Note for this entry</inlineHelpText>
+        <label>Note</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Project_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>Project_Task__r.Project__r.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Project Id</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Project_Task__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Task related to this entry</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Task related to this entry</inlineHelpText>
+        <label>Project Task</label>
+        <referenceTo>Project_Task__c</referenceTo>
+        <relationshipLabel>Project Time Entries</relationshipLabel>
+        <relationshipName>Time_Entries</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Project_Timesheet__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Related Timesheet</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Timesheet</inlineHelpText>
+        <label>Project Timesheet</label>
+        <referenceTo>Project_Timesheet__c</referenceTo>
+        <relationshipLabel>Project Time Entries</relationshipLabel>
+        <relationshipName>Project_Time_Entries</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <description>Entry time for this record</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Entry time for this record</inlineHelpText>
+        <label>Last Timer Start Date</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Start_Time_Millis__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Start Time in milliseconds</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Start Time in milliseconds</inlineHelpText>
+        <label>Last Timer Start Time (milliseconds)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>Status of timer</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Status of timer</inlineHelpText>
+        <label>Timer Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Start</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Stop</fullName>
+                    <default>true</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Stop_Time_Millis__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Stop Time  in milliseconds</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stop Time  in milliseconds</inlineHelpText>
+        <label>Last Timer Stop Time (milliseconds)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Time_in_hours__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Total Time spent (in hours)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Time spent  (in hours)</inlineHelpText>
+        <label>Total Time (in hours)</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_time_spent_Millis__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Total time spent on this task in milliseconds</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total time spent on this task in milliseconds</inlineHelpText>
+        <label>Total time (milliseconds)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Project Time Entry</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Start_Date__c</columns>
+        <columns>End_Date__c</columns>
+        <columns>Total_Time_in_hours__c</columns>
+        <columns>Status__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Project_Task__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>TE{00000000}</displayFormat>
+        <label>Project Time Entry Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Project Time Entries</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>TW_ApprovedTimeEntryCannotEdited</fullName>
+        <active>true</active>
+        <description>User can not edit the approved time entry.</description>
+        <errorConditionFormula>AND( Project_Timesheet__r.IsApproved__c , ( $User.Id !=  Project_Task__r.Project__r.Project_Manager__c ), $Profile.Name !=&apos;System Administrator&apos;)</errorConditionFormula>
+        <errorMessage>Time sheet associated with this entry is already approved. You can not add or update time entry to it.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>TW_IfTimeStarted_EndDateShouldBlank</fullName>
+        <active>true</active>
+        <description>If Timer status is start then end date should be blank</description>
+        <errorConditionFormula>IF(AND(ISPICKVAL( Status__c, &apos;Start&apos;),  NOT( ISBLANK( End_Date__c ))) , true, false)</errorConditionFormula>
+        <errorMessage>Do not specify End date if timer status is &apos;Start&apos;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>TW_TimerStartDateGreaterThanTimeStopDate</fullName>
+        <active>true</active>
+        <description>Check if Last Timer Start Date greater than Last Timer Stop Date</description>
+        <errorConditionFormula>OR(AND(ISPICKVAL( Status__c , &apos;Stop&apos;),   ISBLANK(Start_Date__c) ), AND(ISPICKVAL( Status__c , &apos;Stop&apos;),   ISBLANK(End_Date__c)),AND(ISPICKVAL( Status__c , &apos;Stop&apos;),   Start_Date__c &gt; End_Date__c))</errorConditionFormula>
+        <errorMessage>Last Timer Start Date and Last Time Stop should not be blank and Last Timer Start Date should not be greater than Last Timer Stop Date</errorMessage>
+    </validationRules>
+</CustomObject>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Time sheet generated for this project for each user working on the project</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <description>Time sheet End Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Time sheet End Date</inlineHelpText>
+        <label>End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Invoice_Amount__c</fullName>
+        <description>Total cost incurred this week</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total cost incurred this week</inlineHelpText>
+        <label>Invoice Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>IsApproved__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Whether time sheet is approved or not</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Whether time sheet is approved or not</inlineHelpText>
+        <label>IsApproved</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Project__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Project related to this timesheet</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Project related to this timesheet</inlineHelpText>
+        <label>Project</label>
+        <referenceTo>Project__c</referenceTo>
+        <relationshipLabel>Project Timesheets</relationshipLabel>
+        <relationshipName>Project_Timesheets</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <description>Time sheet start date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Time sheet start date</inlineHelpText>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Timesheet_Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Manager of this time sheet. It is actually a project manager.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Manager of this time sheet. It is actually a project manager.</inlineHelpText>
+        <label>Timesheet Manager</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Project_Timesheets</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Total_time__c</fullName>
+        <description>Total time spent by people this week on this project.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total time spent by people this week on this project.</inlineHelpText>
+        <label>Total time (Hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Project Timesheet</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Project__c</columns>
+        <columns>Start_Date__c</columns>
+        <columns>End_Date__c</columns>
+        <columns>Invoice_Amount__c</columns>
+        <columns>Total_time__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>IsApproved__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Timesheet_Manager__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Timesheet Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Project Timesheets</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>TW_MemberCantEditTimesheetAfterApproval</fullName>
+        <active>true</active>
+        <description>Only manager can unlock the time sheet after approval. Prevent other users from editi</description>
+        <errorConditionFormula>AND(  ISCHANGED(IsApproved__c) , Timesheet_Manager__c != $User.Id , $Profile.Name !=&apos;System Administrator&apos;)</errorConditionFormula>
+        <errorMessage>You do not have permission to edit the time sheet</errorMessage>
+    </validationRules>
+</CustomObject>

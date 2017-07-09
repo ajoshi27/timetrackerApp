@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>TimeWatch__Start_Date__c</field>
+        <field>TimeWatch__End_Date__c</field>
+        <field>TimeWatch__Timesheet_Manager__c</field>
+        <field>TimeWatch__Project__c</field>
+        <field>TimeWatch__Total_time__c</field>
+        <field>TimeWatch__Invoice_Amount__c</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Time_Tracker_Mark_Timesheet_as_approve</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>TimeTracker_Notify_user_about_timesheet_approval</name>
+                <type>Alert</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>Timesheet_Manager__c</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Send time sheet to manager for approval</description>
+        <label>Send to Manager for Approval</label>
+        <name>Send_to_Manager_for_Approval</name>
+        <rejectionActions>
+            <action>
+                <name>TimeTracker_Notify_user_about_timesheet_rejection</name>
+                <type>Alert</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <description>Once Time sheet is generated, user can send it for Approval to the project manager.</description>
+    <emailTemplate>TimeTracker_Email_Templates/TimeTracker</emailTemplate>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <criteriaItems>
+            <field>TimeWatch__Project_Timesheet__c.CreatedDate</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <label>TimeTracker - Project Timesheet Approval</label>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

@@ -1,0 +1,8 @@
+Hi {!Project_Timesheet__c.OwnerFullName},
+
+ {!Project_Timesheet__c.Timesheet_Manager__c} has  rejected the time sheet for the week {!Project_Timesheet__c.Start_Date__c} To {!Project_Timesheet__c.End_Date__c}
+
+You can view the details here : {!Project_Timesheet__c.Link}
+
+Regards,
+TimeTracker Admin

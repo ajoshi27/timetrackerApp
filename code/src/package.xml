@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Time_Tracker</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApprovalProcess</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>TW_GenerateTimesheetBatch</members>
+        <members>TW_GenerateTimesheetBatchHelper</members>
+        <members>TW_ProjectMemberTriggerHandler</members>
+        <members>TW_ProjectMemberTriggerHelper</members>
+        <members>TW_ProjectTaskTriggerHandler</members>
+        <members>TW_ProjectTaskTriggerHelper</members>
+        <members>TW_ProjectTimeEntryTriggerHandler</members>
+        <members>TW_ProjectTimeEntryTriggerHelper</members>
+        <members>TW_ProjectTimesheetTriggerHandler</members>
+        <members>TW_ProjectTimesheetTriggerHelper</members>
+        <members>TW_ScheduleGenerateTimesheetBatch</members>
+        <members>TW_StopwatchController</members>
+        <members>TW_StopwatchUtil</members>
+        <members>TW_TestFactory</members>
+        <members>TW_TimeTrackerAppTest</members>
+        <members>TW_TriggerFactory</members>
+        <members>TW_TriggerInterface</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>TimeTracker_Email_Templates</members>
+        <members>TimeTracker_Email_Templates/Time_sheet_Approval_notification</members>
+        <members>TimeTracker_Email_Templates/Time_sheet_Rejection_notification</members>
+        <members>TimeTracker_Email_Templates/TimeTracker</members>
+        <name>EmailTemplate</name>
+    </types>
+    <types>
+        <members>Time_Tracker_UtilityBar</members>
+        <members>Timer</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomLabels</name>
+    </types>
+    <types>
+        <members>Project__c-Project Layout</members>
+        <members>Project_Member__c-Project Team Layout</members>
+        <members>Project_Task__c-Project Task Layout</members>
+        <members>Project_Time_Entry__c-Time Entry Layout</members>
+        <members>Project_Time_Entry_History__c-Project Time Entry History Layout</members>
+        <members>Project_Timesheet__c-Project Timesheet Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Project__c-en_US</members>
+        <members>Project_Member__c-en_US</members>
+        <members>Project_Task__c-en_US</members>
+        <members>Project_Time_Entry__c-en_US</members>
+        <members>Project_Time_Entry_History__c-en_US</members>
+        <members>Project_Timesheet__c-en_US</members>
+        <members>Trigger_Settings__c-en_US</members>
+        <name>CustomObjectTranslation</name>
+    </types>
+    <types>
+        <members>TimeWatch_Standard_Access</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>TimeTracker Standard Profile</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ReportType</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>Project__c</members>
+        <members>Project_Member__c</members>
+        <members>Project_Task__c</members>
+        <members>Project_Time_Entry__c</members>
+        <members>Project_Time_Entry_History__c</members>
+        <members>Project_Timesheet__c</members>
+        <members>Trigger_Settings__c</members>
+        <name>Workflow</name>
+    </types>
+    <version>38.0</version>
+</Package>
